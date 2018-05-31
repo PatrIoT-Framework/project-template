@@ -4,9 +4,10 @@ pipeline {
     }
 
     stages {
-        stage('Start') {
+
+        stage('Wait') {
             steps {
-                githubNotify description: 'Tests had started', status PENDING
+                sh 'sleep 60'
             }
         }
 
