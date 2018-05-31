@@ -33,4 +33,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            junit 'target/reports/*.xml'
+        }
+    }
 }
